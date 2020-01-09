@@ -3,7 +3,11 @@ import './App.css';
 import Page1 from './components/Page1';
 import AsyncComponent from './components/AsyncComponent';
 
-class App extends React.Component {
+class App extends React.PureComponent {
+  shouldComponentUpdate(nextProps , nextState)
+  {
+     return false; 
+  }
   state = {
     route : "Page1",
   }
