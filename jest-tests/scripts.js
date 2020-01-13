@@ -7,10 +7,11 @@ const googleDatabase = [
     'b2b.com'
 ];
 
-const googleSearch = (keyword) => {
-    const matches =  googleDatabase.filter(website => website.includes(keyword));
+const googleSearch = (keyword , db) => {
+    const matches =  db.filter(website => website.includes(keyword));
 
     return matches.length > 3 ? matches.slice(0 , 3) : matches;
 }
 
-console.log(googleSearch('cat'));
+
+module.exports = googleSearch;
