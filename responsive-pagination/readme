@@ -1,0 +1,9 @@
+A library for re structure the pagination in the <ul class="pagination"> to be responsive depend on the ul width
+
+original library : https://github.com/auxiliary/rpage
+
+i just modified the follwoings
+
+- add comments
+- calculate the width from the <ul> not from the parent of the <ul>
+
