@@ -30,3 +30,45 @@ let dance = () : void => {
 let error = () : never => {
     throw Error('ops');
 }
+
+// interface
+interface RobotArmy {
+    count : number,
+    type : string,
+    magic? : string  // it's optional param , maybe exist maybe not
+}
+
+let fight = (robots : RobotArmy) => 
+{
+    console.log(robots.type , "fight");
+}
+
+// type assertion ( casting)
+let code : any = 200;
+
+let code2 : number;
+code2 = <number> code;
+
+code2 = code as number;
+
+
+// class
+class Animal {
+    private name : string;
+
+    constructor(name : string)
+    {
+        this.name = name;
+    }
+
+    getName()
+    {
+        return this.name;
+    }
+}
+let lion  = new Animal('lion');
+console.log(lion.getName());
+
+// union
+let confused : string | number = "12";
+confused = 12;

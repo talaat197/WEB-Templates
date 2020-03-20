@@ -29,3 +29,26 @@ var dance = function () {
 var error = function () {
     throw Error('ops');
 };
+var fight = function (robots) {
+    console.log(robots.type, "fight");
+};
+// type assertion ( casting)
+var code = 200;
+var code2;
+code2 = code;
+code2 = code;
+// class
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.name = name;
+    }
+    Animal.prototype.getName = function () {
+        return this.name;
+    };
+    return Animal;
+}());
+var lion = new Animal('lion');
+console.log(lion.getName());
+// union
+var confused = "12";
+confused = 12;
