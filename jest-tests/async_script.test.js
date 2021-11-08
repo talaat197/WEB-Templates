@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 const fetchPeople = require("./async_script");
 jest.setTimeout(300000);
 
@@ -21,21 +21,20 @@ jest.setTimeout(300000);
 //     });
 // })
 
-it('getPeople returns count and result' , () => {
-    const mockFetch = jest.fn()
-    .mockReturnValue(Promise.resolve({
-        json: () => Promise.resolve({
-            count : 87,
-            results : [
-                0 , 2 , 3 , 4 , 5
-            ]
-        })
-    }));
-    expect.assertions(2);
-    return fetchPeople.getPeople(mockFetch).then(data => {
-        // the number of time mockFetch has been called
-        expect(mockFetch.mock.calls.length).toBe(1);
-        expect(mockFetch).toBeCalledWith("https://swapi.co/api/people");
-
-    });
-})
+it("getPeople returns count and result", () => {
+  const mockFetch = jest.fn().mockReturnValue(
+    Promise.resolve({
+      json: () =>
+        Promise.resolve({
+          count: 87,
+          results: [0, 2, 3, 4, 5],
+        }),
+    })
+  );
+  expect.assertions(2);
+  return fetchPeople.getPeople(mockFetch).then((data) => {
+    // the number of time mockFetch has been called
+    expect(mockFetch.mock.calls.length).toBe(1);
+    expect(mockFetch).toBeCalledWith("https://swapi.co/api/people");
+  });
+});

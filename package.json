@@ -1,15 +1,16 @@
 {
   "devDependencies": {
     "branch-naming-check": "^1.0.2",
-    "husky": "^7.0.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'talaat'",
-      "pre-push": "branch-naming-check '^(STORY|PBI)-\\d+(\\-.+|$)'"
-    }
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.4.1"
   },
   "scripts": {
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write"
+    ]
   }
 }

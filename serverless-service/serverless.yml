@@ -24,7 +24,7 @@ provider:
   name: aws
   runtime: nodejs12.x
 
-# you can overwrite defaults here
+  # you can overwrite defaults here
   stage: dev
 #  region: us-east-1
 
@@ -60,9 +60,9 @@ provider:
 functions:
   tmt_lambda:
     handler: handler.tmt_lambda
-#    The following are a few example events you can configure
-#    NOTE: Please make sure to change your handler code to work with those events
-#    Check the event documentation for details
+    #    The following are a few example events you can configure
+    #    NOTE: Please make sure to change your handler code to work with those events
+    #    Check the event documentation for details
     events:
       - http:
           path: tmt/lambda

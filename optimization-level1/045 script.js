@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   console.log("DOM fully loaded and parsed");
 });
-window.addEventListener("load", function(event) {
+window.addEventListener("load", function (event) {
   console.log("All resources finished loading!");
 });
-console.log('this is script 1')
+console.log("this is script 1");

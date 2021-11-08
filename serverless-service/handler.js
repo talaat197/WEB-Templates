@@ -1,29 +1,26 @@
-'use strict';
+"use strict";
 
-module.exports.tmt_lambda = async event => {
-  const emoijs = [
-    ':)' , ':D' , ';)' , '<3'
-  ]
+module.exports.tmt_lambda = async (event) => {
+  const emoijs = [":)", ":D", ";)", "<3"];
   let rank = 0;
 
-  if(event.queryStringParameters && event.queryStringParameters.rank)
-  {
+  if (event.queryStringParameters && event.queryStringParameters.rank) {
     rank = event.queryStringParameters.rank;
     rank = rank >= emoijs.length ? emoijs.length - 1 : rank;
   }
-   
+
   const rankEmoji = emoijs[rank];
-  
+
   return {
-    statusCode: 200, 
-    header : {
-      'Access-Control-Allow-Origin' : "*"
+    statusCode: 200,
+    header: {
+      "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify(
       {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
+        message: "Go Serverless v1.0! Your function executed successfully!",
         input: event,
-        rank : rankEmoji
+        rank: rankEmoji,
       },
       null,
       2

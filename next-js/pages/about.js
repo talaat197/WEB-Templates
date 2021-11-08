@@ -1,8 +1,8 @@
-import Header from '../components/Header';
+import Header from "../components/Header";
 
 const About = () => (
   <div>
-      <Header/>
+    <Header />
     <p>About Page</p>
   </div>
 );
