@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "branch-naming-check": "^1.0.2",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "branch-naming-check '^(STORY|PBI)-\\d+(\\-.+|$)'"
+    }
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}
